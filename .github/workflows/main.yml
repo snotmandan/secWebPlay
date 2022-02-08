@@ -72,5 +72,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        path: ${{env.file_name}}
+        path: XunitTests/${{env.file_name}}
         
