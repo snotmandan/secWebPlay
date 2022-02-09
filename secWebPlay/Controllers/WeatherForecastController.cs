@@ -28,7 +28,9 @@ namespace secWebPlay.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            var password = "pass-word-123-1bc";
             var rng = new Random();
+            Console.WriteLine(password);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
