@@ -70,7 +70,8 @@ jobs:
       if: ${{always()}}
       with:
         name: 'Test Run'
-        path: ${{github.workspace}}/XunitTests/{{env.file_name}}
+        path: ${{github.workspace}}/XunitTests/${{env.file_name}}
+        
       
       # add report as PR comment (if PR)
     - name: comment PR
