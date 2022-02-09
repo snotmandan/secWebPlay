@@ -69,7 +69,7 @@ jobs:
       uses: actions/upload-artifact@v2
       if: ${{always()}}
       with:
-        name: 'Test Run'
+        name: 'Test-Result'
         path: ${{github.workspace}}/XunitTests/${{env.file_name}}
         
       
