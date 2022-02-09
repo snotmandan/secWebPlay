@@ -58,9 +58,11 @@ jobs:
       run: dotnet test ./XunitTests --no-restore --no-build --configuration $config --logger:"liquid.md;LogFileName=${{github.workspace}}/XunitTests/${{env.file_name}};Title=${{env.title}};"
     
       # list the file names in the repo
+      # result of  ${{ github.workspace }} was /home/runner/work/secWebPlay/secWebPlay
     - name: List files in the repository
       run: |
         ls ${{ github.workspace }}
+        ls ${{ github.workspace }}/XunitTests
           
       # upload report as build artifact
     - name: Upload a Build Artifact
